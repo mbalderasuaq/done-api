@@ -1,0 +1,30 @@
+# Dependency directories
+
+node_modules/
+
+# TypeScript cache
+
+*.tsbuildinfo
+
+# Optional npm cache directory
+
+.npm
+
+# Optional eslint cache
+
+.eslintcache
+
+# Environment variable
+
+.env
+
+# Finder (MacOS) folder config
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Lock files
+package-lock.json
+yarn.lock
+bun.lockb
