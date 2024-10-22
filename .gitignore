@@ -17,6 +17,7 @@ node_modules/
 # Environment variable
 
 .env
+.env.local
 
 # Finder (MacOS) folder config
 .DS_Store
