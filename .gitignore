@@ -25,6 +25,9 @@ node_modules/
 # VSCode
 .vscode/
 
+# Git
+.git/
+
 # Lock files
 package-lock.json
 yarn.lock
