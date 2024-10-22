@@ -5,7 +5,7 @@ FROM oven/bun:latest AS builder
 WORKDIR /app
 
 # Copia los archivos de configuración y dependencias
-COPY bun.lockb package.json tsconfig.json ./
+COPY package.json tsconfig.json ./
 
 # Instala las dependencias
 RUN bun install

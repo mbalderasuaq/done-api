@@ -1,7 +1,7 @@
 services:
   mongo:
     image: mongo
-    container_name: mongo
+    container_name: mongo-done
     ports:
       - "27017:27017"
     volumes:
@@ -10,7 +10,7 @@ services:
 
   redis:
     image: "redis"
-    container_name: redis
+    container_name: redis-done
     ports:
       - "6379:6379"
     restart: always
