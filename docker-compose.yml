@@ -1,0 +1,34 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - done-data:/data/db
+    attach: false
+
+  redis:
+    image: "redis"
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: done-api-docker
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+      - redis
+    env_file:
+      - .env
+
+volumes:
+  done-data:
