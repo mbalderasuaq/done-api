@@ -147,7 +147,7 @@ Esto levantará el servidor en `http://localhost:3000`.
 
 ## Estructura del Proyecto
 
-```json
+```bash
 done-api/
 ├── controllers/
 │   └── task.controller.ts
