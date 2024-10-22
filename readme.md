@@ -50,6 +50,8 @@ REDIS_URL=redis://redis:6379
 
 ### Ejecutar Docker
 
+Docker Compose es una herramienta que permite definir y ejecutar aplicaciones Docker de múltiples contenedores. En este proyecto, se incluye un archivo `docker-compose.yml` que define los servicios de la aplicación. [Mas información](https://docs.docker.com/compose/).
+
 Si prefieres ejecutar el proyecto en contenedores Docker, puedes usar los siguientes comandos:
 
 1. **Levantar la aplicación con Docker Compose:**
