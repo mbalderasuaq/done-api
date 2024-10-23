@@ -1,8 +1,8 @@
-# Done API
+# ✅ Done API
 
 API de gestión de tareas desarrollada con Node.js, TypeScript, Express y Bun. Esta API incluye funcionalidades para gestionar tareas, con una arquitectura basada en controladores, servicios, repositorios y conectividad a bases de datos como MongoDB y Redis. 
 
-## Tabla de Contenidos
+## 🔡 Tabla de Contenidos
 
 En este proyecto encontrarás dos formas de ejecutar la aplicación:
 
@@ -14,7 +14,7 @@ En este proyecto encontrarás dos formas de ejecutar la aplicación:
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 
-## Configuración
+## ⚙️ Configuración
 
 ### Clonar el Repositorio
 
@@ -42,7 +42,7 @@ REDIS_URL=redis://redis:6379
 >[!IMPORTANT]
 > Asegúrate de tener un archivo `.env` en la raíz del proyecto con las variables de entorno necesarias.
 
-## Docker
+## 🐳 Docker
 
 ### Requisitos
 
@@ -64,7 +64,7 @@ Si prefieres ejecutar el proyecto en contenedores Docker, puedes usar los siguie
    docker compose down
    ```
 
-## Ejecutar Localmente
+## 🏠 Ejecutar Localmente
 
 ### Requisitos
 
@@ -105,7 +105,11 @@ yarn start
 
 Esto levantará el servidor en `http://localhost:3000`.
 
-## API Endpoints
+## 🟩 Swagger
+
+La API cuenta con una documentación generada con Swagger. Puedes acceder a ella en `http://localhost:3000/docs`.
+
+## 🔗 API Endpoints
 
 ### Tareas
 
@@ -121,7 +125,7 @@ Esto levantará el servidor en `http://localhost:3000`.
 - **PATCH `/tasks/:id`**: Actualiza un campo específico de una tarea.
 - **DELETE `/tasks/:id`**: Elimina una tarea por ID.
 
-## Entidades
+## 🟦 Entidades
 
 ### Tarea
 
@@ -136,18 +140,18 @@ Esto levantará el servidor en `http://localhost:3000`.
 }
 ```
 
-## Tecnologías Utilizadas
+## 💻 Tecnologías Utilizadas
 
-- **Bun** como entorno de ejecución.
-- **Express** para la creación del servidor.
-- **TypeScript** para tipado estático.
-- **MongoDB** como base de datos NoSQL.
-- **Redis** para almacenamiento en caché.
-- **Docker** para contenerización de la aplicación.
+- 🟨 **Bun** como entorno de ejecución.
+- 🟩 **Express** para la creación del servidor.
+- 🟦 **TypeScript** para tipado estático.
+- 🟩 **MongoDB** como base de datos NoSQL.
+- 🟥 **Redis** para almacenamiento en caché.
+- 🟦 **Docker** para contenerización de la aplicación.
 
-## Estructura del Proyecto
+## 🗂️ Estructura del Proyecto
 
-```json
+```bash
 done-api/
 ├── controllers/
 │   └── task.controller.ts
