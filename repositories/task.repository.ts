@@ -14,7 +14,7 @@ export class TaskRepository implements TaskRepositoryInterface {
     }
 
     async getByIdAsync(id: string): Promise<TaskModel | null> {
-        const task = await this.tasks.findOne({ id: id });
+        const task = await this.tasks.findOne({ _id: id });
 
         if (!task) {
             return null;
@@ -54,7 +54,7 @@ export class TaskRepository implements TaskRepositoryInterface {
 
     async createAsync(title: string, description: string, status: boolean, dueDate: Date | null): Promise<TaskModel> {
         const task: TaskEntity = {
-            id: crypto.randomUUID(),
+            _id: crypto.randomUUID(),
             title: title,
             description: description,
             status: status,
@@ -88,10 +88,10 @@ export class TaskRepository implements TaskRepositoryInterface {
 
         updateTask.dueDate = dueDate
 
-        await this.tasks.updateOne({ id: id }, { $set: updateTask });
+        await this.tasks.updateOne({ _id: id }, { $set: updateTask });
     }
 
     async deleteByIdAsync(id: string): Promise<void> {
-        await this.tasks.deleteOne({ id: id });
+        await this.tasks.deleteOne({ _id: id });
     }
 }

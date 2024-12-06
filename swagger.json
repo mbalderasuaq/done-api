@@ -96,7 +96,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Task"
+                  "$ref": "#/components/schemas/TaskRequest"
                 }
               }
             },
@@ -104,7 +104,14 @@
           },
           "responses": {
             "201": {
-              "description": "Task created"
+              "description": "Task created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Task"
+                  }
+                }
+              }
             },
             "400": {
               "description": "Bad request"
@@ -118,7 +125,7 @@
           }
         }
       },
-      "/tasks/:id": {
+      "/tasks/{id}": {
         "get": {
           "summary": "Get a task by ID",
           "tags": ["Tasks"],
@@ -306,10 +313,37 @@
         "Task": {
           "type": "object",
           "properties": {
-            "id": {
+            "_id": {
               "type": "string",
               "description": "Task ID"
             },
+            "title": {
+              "type": "string",
+              "description": "Task title"
+            },
+            "description": {
+              "type": "string",
+              "description": "Task description"
+            },
+            "status": {
+              "type": "boolean",
+              "description": "Task status"
+            },
+            "dueDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Task due date"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Task creation date"
+            }
+          }
+        },
+        "TaskRequest": {
+          "type": "object",
+          "properties": {
             "title": {
               "type": "string",
               "description": "Task title"
